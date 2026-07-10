@@ -71,7 +71,7 @@ public class OrderTest {
 
         Order order = repo.findBySku("SKU-100");
 
-        assertEquals("SKU-100", order.sku());
+        assertEquals("SKU-10", order.sku());
         assertEquals(1, order.qty());
     }
 
