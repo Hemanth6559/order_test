@@ -65,7 +65,7 @@ public class OrderTest {
 
         factory.persisted(
                 OrderBuilder.anOrder()
-                        .withSku("SKU-1000")
+                        .withSku("SKU-100")
                         .build()
         );
 
