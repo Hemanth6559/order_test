@@ -68,3 +68,4 @@ public class CatalogPOMTest {
         assertTrue(message.toLowerCase().contains("confirmed"));
     }
 }
+//de
