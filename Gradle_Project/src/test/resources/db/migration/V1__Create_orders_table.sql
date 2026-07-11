@@ -6,3 +6,4 @@ CREATE TABLE IF NOT EXISTS orders (
     order_date DATE NOT NULL,
     shipped BOOLEAN NOT NULL
 );
+ 

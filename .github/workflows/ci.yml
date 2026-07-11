@@ -54,12 +54,19 @@ jobs:
 
       - name: Run Order Test
         working-directory: Gradle_Project
-        run: ./gradlew orderTest --no-configuration-cache
+        run: ./gradlew integrationTest --no-configuration-cache
         env:
           JAVA_TOOL_OPTIONS: >
             -Ddb.url=jdbc:postgresql://localhost:5432/testdb
             -Ddb.user=postgres
             -Ddb.password=postgres
+
+      - name: Copy Allure Environment
+        if: always()
+        run: |
+          mkdir -p Gradle_Project/build/allure-results
+          cp Gradle_Project/src/test/resources/environment.properties \
+             Gradle_Project/build/allure-results/environment.properties
 
       - name: Checkout gh-pages branch
         if: always()
